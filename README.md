@@ -38,6 +38,7 @@
 -   [Eslint](https://eslint.org/)
 -   [Prettier](https://prettier.io/)
 -   [Tailwind CSS](https://tailwindcss.com)
+-   [next-seo](https://github.com/garmeeh/next-seo)
 
 ### License
 
