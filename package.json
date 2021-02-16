@@ -9,7 +9,8 @@
     "build": "next build",
     "start": "next start",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test": "jest"
   },
   "dependencies": {
     "next": "^10.0.7",
@@ -24,11 +25,16 @@
     "@storybook/addon-links": "^6.1.18",
     "@storybook/react": "^6.1.18",
     "@tailwindcss/postcss7-compat": "^2.0.3",
+    "@types/jest": "^26.0.20",
     "@types/node": "^14.14.28",
     "@types/react": "^17.0.2",
+    "@types/react-test-renderer": "^17.0.1",
     "autoprefixer": "9",
     "babel-loader": "^8.2.2",
+    "jest": "^26.6.3",
     "postcss": "7",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+    "react-test-renderer": "^17.0.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "ts-jest": "^26.5.1"
   }
 }

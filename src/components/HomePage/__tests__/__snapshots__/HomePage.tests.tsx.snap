@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage renders 1`] = `
+<div
+  className="p-5"
+>
+  <h1
+    className="text-2xl"
+  >
+    React TypeScript Next.js starter
+  </h1>
+</div>
+`;
