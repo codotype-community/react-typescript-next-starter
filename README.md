@@ -27,15 +27,6 @@
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" alt="Hit Count" />
 </div>
 
-## Table of Contents
-
--   [Install](#install)
--   [Usage](#usage)
--   [Configuration](#configuration)
--   [Developing](#developing)
--   [Compatibility](#compatibility)
--   [License](#license)
-
 <hr/>
 
 ## Built with
