@@ -1,8 +1,9 @@
 import "../src/styles/tailwind.css";
 import Head from "next/head";
 import { Navbar } from "../src/components/Navbar";
+import { AppProps } from "next/app";
 
-export default ({ Component, pageProps }) => {
+export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
     return (
         <>
             <Head>
@@ -12,4 +13,4 @@ export default ({ Component, pageProps }) => {
             <Component {...pageProps} />
         </>
     );
-};
+}
