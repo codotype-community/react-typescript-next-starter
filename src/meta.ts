@@ -31,7 +31,8 @@ export const toolingProperty = new Primitives.ConfigurationProperty({
         documentation: ""
       },
       type: PropertyTypes.BOOLEAN,
-      layoutVariant: PropertyLayoutVariants.CARD_COL_6
+      layoutVariant: PropertyLayoutVariants.CARD_COL_6,
+      defaultValue: true
     }),
     new Primitives.ConfigurationProperty({
       identifier: "prettier",
@@ -71,7 +72,8 @@ export const toolingProperty = new Primitives.ConfigurationProperty({
         documentation: ""
       },
       type: PropertyTypes.BOOLEAN,
-      layoutVariant: PropertyLayoutVariants.CARD_COL_6
+      layoutVariant: PropertyLayoutVariants.CARD_COL_6,
+      defaultValue: true
     })
   ]
 });
