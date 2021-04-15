@@ -6,7 +6,7 @@ import {
 
 // // // //
 // Tooling
-const toolingProperty = new Primitives.ConfigurationProperty({
+export const toolingProperty = new Primitives.ConfigurationProperty({
   identifier: "tooling",
   content: {
     label: "Tooling",
@@ -77,7 +77,7 @@ const toolingProperty = new Primitives.ConfigurationProperty({
 
 // // // //
 // Analytics
-const analyticsProperty = new Primitives.ConfigurationProperty({
+export const analyticsProperty = new Primitives.ConfigurationProperty({
   identifier: "analytics",
   content: {
     label: "Analytics",
@@ -118,7 +118,7 @@ const analyticsProperty = new Primitives.ConfigurationProperty({
 
 // // // //
 // SEO
-const seoProperty = new Primitives.ConfigurationProperty({
+export const seoProperty = new Primitives.ConfigurationProperty({
   identifier: "seo",
   content: {
     label: "SEO",
@@ -188,7 +188,7 @@ const seoProperty = new Primitives.ConfigurationProperty({
 
 // // // //
 // Hosting
-const hostingProperty = new Primitives.ConfigurationProperty({
+export const hostingProperty = new Primitives.ConfigurationProperty({
   identifier: "hosting",
   content: {
     label: "Hosting",
