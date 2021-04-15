@@ -8,6 +8,7 @@ const generator: GeneratorProps = {
     await this.composeWith("./package");
     await this.composeWith("./tooling");
     await this.composeWith("./hosting");
+    await this.composeWith("./react-components");
   }
 };
 
