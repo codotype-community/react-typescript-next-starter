@@ -1,8 +1,8 @@
 version: "3"
 
 services:
-    codotype:
-        container_name: nextjs-starter-kit
-        build: ./
-        ports:
-            - "3000:3000"
+  codotype:
+    container_name: nextjs-starter-kit
+    build: ./
+    ports:
+      - "8080:8080"

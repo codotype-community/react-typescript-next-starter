@@ -7,6 +7,7 @@ const generator: GeneratorProps = {
     await this.composeWith("./base");
     await this.composeWith("./package");
     await this.composeWith("./tooling");
+    await this.composeWith("./hosting");
   }
 };
 

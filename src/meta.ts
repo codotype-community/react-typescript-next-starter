@@ -215,13 +215,11 @@ export const hostingProperty = new Primitives.ConfigurationProperty({
         documentation: ""
       },
       type: PropertyTypes.DROPDOWN,
-      defaultValue: "vercel",
+      defaultValue: "docker",
       dropdownOptions: [
-        { label: "Vercel", value: "vercel" },
-        { label: "Netlify", value: "netlify" },
-        { label: "Docker", value: "docker" },
-        { label: "GitHub Pages", value: "github_pages" },
-        { label: "None", value: "none" }
+        { label: "None", value: "none" },
+        { label: "Docker", value: "docker" }
+        // { label: "Netlify", value: "netlify" }
       ]
     })
   ]
@@ -230,7 +228,9 @@ export const hostingProperty = new Primitives.ConfigurationProperty({
 // Other properties:
 // - Marketing - Mailchip
 // - Customer Engagement - Intercom
+// - Customer Engagement - FOSS Intercom alternative?
 // - Customer Engagement - Segment (Customer Data Platform)
+// - Customer Engagement - Google Tag Manager?
 export const NextJsStarter = new Primitives.Plugin({
   identifier: "react-next-ts-website-starter-variant",
   project_path: "react-next-ts-starter",
