@@ -1,47 +1,29 @@
-<h1 align="center">React Typescript Next.js Starter</h1>
+# Nextjs Starter Kit Codotype Plugin
 
-<div align="center">
-  <strong>Web Application starter kit built with React, TypeScript, Next.js &amp; Tailwind CSS</strong>
+A starter Codotype Plugin.
 
-</div>
+## Getting Started
 
-<br />
+This is a Codotype Plugin for generating React.js + Next.js + TypeScript applications.
 
-<div align="center">
-  Tooling with Storybook, Jest, EsLint, and Prettier
-</div>
+### Development
 
-<br />
+1. Run `yarn install` to install dependencies
 
-<div align="center">
-  <!-- GitHub Stars -->
-  <img src="https://img.shields.io/github/stars/codotype-community/react-typescript-next-starter.svg?style=social&label=Star" alt="GitHub Stars" />
+2. Run `yarn build` to build the `Nextjs Starter Kit` plugin
 
-  <!-- MIT License -->
-  <img src="https://img.shields.io/apm/l/atomic-design-ui.svg" alt="MIT License" />
+3. Run `yarn serve` to serve the plugin locally using [@codotype/cli](https://www.npmjs.com/package/@codotype/cli)
 
-  <!-- Hit Count -->
-  <img src="http://hits.dwyl.com/codotype-community/react-typescript-next-starter.svg" alt="Hit Count" />
+4. Use the web app (should be served at `localhost:3030`) to change default parameters and generate your code.
 
-  <!-- PRs Welcome -->
-  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" alt="Hit Count" />
-</div>
+5. Your generated code should be in the `.codotype-out` directory.
 
-<hr/>
+### Technologies used
 
-## Built with
+- [Codotype](https://codotype.org/)
 
--   [React](https://reactjs.org)
--   [TypeScript](https://www.typescriptlang.org/)
--   [Storybook](https://storybook.js.org/)
--   [Jest](https://jestjs.io)
--   [Eslint](https://eslint.org/)
--   [Prettier](https://prettier.io/)
--   [Tailwind CSS](https://tailwindcss.com)
--   [next-seo](https://github.com/garmeeh/next-seo)
+## License
 
-### License
+[MIT License](http://opensource.org/licenses/MIT).
 
-Open source under the [MIT License](https://github.com/codotype-community/react-typescript-next-starter/blob/main/LICENSE). Built with&nbsp;:heart:&nbsp; by [@aeksco](https://github.com/aeksco)
-
-[![Tweet](https://img.shields.io/twitter/url/https/github.com/codotype-community/react-typescript-next-starter.svg?style=social)](https://twitter.com/intent/tweet?text=https://github.com/codotype-community/react-typescript-next-starter)
+Built with [Codotype.io](https://www.codotype.io/).
