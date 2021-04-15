@@ -3,7 +3,9 @@ import { GeneratorProps } from "@codotype/core";
 const Generator: GeneratorProps = {
   name: "Nextjs Starter Kit - Base",
   async write({ runtime, project }) {
-    // Ensures directory structure
+    // Ensures directory structure in destination root
+    // NOTE - this should be handled automatically by runtime.copyDir(),
+    // but there's a bug there, so we have to do it manually
     await runtime.ensureDir("src");
     await runtime.ensureDir("src/components");
     await runtime.ensureDir("src/components/HomePage");
