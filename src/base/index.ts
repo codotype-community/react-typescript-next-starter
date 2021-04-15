@@ -16,10 +16,12 @@ const Generator: GeneratorProps = {
     await runtime.ensureDir("styles");
     await runtime.ensureDir("pages");
     await runtime.ensureDir("public");
-    await runtime.ensureDir(".storybook");
 
     // Copies all contents of base/templates into destination root
-    await runtime.copyDir({ src: "", dest: "" });
+    await runtime.copyDir({
+      src: "",
+      dest: ""
+    });
   }
 };
 
