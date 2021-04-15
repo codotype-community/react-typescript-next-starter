@@ -3,6 +3,7 @@ import {
   Primitives,
   PropertyLayoutVariants
 } from "@codotype/core";
+import { documentation } from "./documentation";
 
 // // // //
 // Tooling
@@ -234,17 +235,15 @@ export const NextJsStarter = new Primitives.Plugin({
   content: {
     label: "React + Next + TypeScript Website Starter",
     description: "React + Next + TypeScript Website Starter",
-    icon: "https://miro.medium.com/max/500/1*cPh7ujRIfcHAy4kW2ADGOw.png",
-    documentation: "" // TODO - add documentation here
+    icon: "https://miro.medium.com/max/500/1*cPh7ujRIfcHAy4kW2ADGOw.png", // TODO - get self-hosted icon here
+    documentation: documentation
   },
   configurationGroups: [
     new Primitives.ConfigurationGroup({
       identifier: "configure",
       content: {
         label: "Configure",
-        description: "Configure your boilerplate code",
-        icon: "",
-        documentation: ""
+        description: "Configure your boilerplate code"
       },
       properties: [
         toolingProperty,
