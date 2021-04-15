@@ -1,11 +1,11 @@
 import { GeneratorProps } from "@codotype/core";
 import { getConfig } from "../getConfig";
 
+// Options:
 // "none"
 // "vercel"
 // "netlify"
 // "docker"
-
 const Generator: GeneratorProps = {
   name: "Nextjs Starter Kit - Hosting files",
   async write({ runtime, project }) {
