@@ -23,7 +23,7 @@ export const toolingProperty = new Primitives.ConfigurationProperty({
     new Primitives.ConfigurationProperty({
       identifier: "jest",
       content: {
-        label: "Include Jest",
+        label: "Jest",
         description:
           "Include Jest environment and snapshot tests for all your components",
         icon:
@@ -37,7 +37,7 @@ export const toolingProperty = new Primitives.ConfigurationProperty({
     new Primitives.ConfigurationProperty({
       identifier: "prettier",
       content: {
-        label: "Include Prettier",
+        label: "Prettier",
         description:
           "Include Prettier .rc files and npm script for code formattting",
         icon:
@@ -64,7 +64,7 @@ export const toolingProperty = new Primitives.ConfigurationProperty({
     new Primitives.ConfigurationProperty({
       identifier: "storybook",
       content: {
-        label: "Include Storybook",
+        label: "Storybook",
         description:
           "Include Storybook environment and stories for all your components",
         icon:
@@ -96,7 +96,7 @@ export const analyticsProperty = new Primitives.ConfigurationProperty({
     new Primitives.ConfigurationProperty({
       identifier: "googleAnalytics",
       content: {
-        label: "Include Google Analytics",
+        label: "Google Analytics",
         description: "Include Google Analytics in your website",
         icon:
           "https://cdn.iconscout.com/icon/free/png-512/google-analytics-2038788-1721678.png",
@@ -175,7 +175,7 @@ export const seoProperty = new Primitives.ConfigurationProperty({
     new Primitives.ConfigurationProperty({
       identifier: "jsonLD",
       content: {
-        label: "Include JSON-LD Metadata",
+        label: "JSON-LD Metadata",
         description: "Include JSON-LD metadata for each of your pages",
         icon:
           // "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/JSON_vector_logo.svg/1200px-JSON_vector_logo.svg.png",
