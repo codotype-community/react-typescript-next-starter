@@ -15,7 +15,7 @@ Customize this starter kit to jumpstart your next app with React.js, Next.js, Ty
 
 -  Run \`yarn storybook\` to run the Storybook server
 
-## Built with:
+### Built with:
 
 -   [React](https://reactjs.org)
 -   [TypeScript](https://www.typescriptlang.org/)
