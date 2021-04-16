@@ -235,8 +235,9 @@ export const NextJsStarter = new Primitives.Plugin({
   identifier: "react-next-ts-website-starter-variant",
   project_path: "react-next-ts-starter",
   content: {
-    label: "React + Next + TypeScript Website Starter",
-    description: "React + Next + TypeScript Website Starter",
+    label: "React + Next + TypeScript Starter",
+    description:
+      "Website starter kit built with React.js, Next.js, TypeScript, TailwindCSS, and Storybook",
     icon: "https://miro.medium.com/max/500/1*cPh7ujRIfcHAy4kW2ADGOw.png", // TODO - get self-hosted icon here
     documentation: documentation
   },
@@ -249,8 +250,8 @@ export const NextJsStarter = new Primitives.Plugin({
       },
       properties: [
         toolingProperty,
-        analyticsProperty,
-        seoProperty,
+        // analyticsProperty,
+        // seoProperty,
         hostingProperty
       ]
     })

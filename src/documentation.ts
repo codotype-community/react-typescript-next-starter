@@ -1,15 +1,19 @@
 export const documentation: string = `
 ## Getting Started
 
-This is a Codotype Plugin for generating React.js + Next.js + TypeScript applications.
+Customize this starter kit to jumpstart your next app with React.js, Next.js, TypeScript and TailwindCSS.
 
 ### Development
 
-1. Run \`yarn install\` to install dependencies
+-  Run \`yarn install\` to install dependencies
 
-2. Run \`yarn build\` to build the \`Nextjs Starter Kit\` plugin
+-  Run \`yarn build\` to build the Next.js app
 
-3. Run \`yarn serve\` to serve the plugin locally using [@codotype/cli](https://www.npmjs.com/package/@codotype/cli)
+-  Run \`yarn dev\` to develop the Next.js app locally
+
+-  Run \`yarn start\` to run the Next.js app
+
+-  Run \`yarn storybook\` to run the Storybook server
 
 ## Built with:
 
