@@ -1,7 +1,8 @@
 import {
   PropertyTypes,
   Primitives,
-  PropertyLayoutVariants
+  PropertyLayoutVariants,
+  ExperienceRecommendations
 } from "@codotype/core";
 import { documentation } from "./documentation";
 
@@ -218,8 +219,8 @@ export const hostingProperty = new Primitives.ConfigurationProperty({
       defaultValue: "docker",
       dropdownOptions: [
         { label: "None", value: "none" },
-        { label: "Docker", value: "docker" }
-        // { label: "Netlify", value: "netlify" }
+        { label: "Docker", value: "docker" },
+        { label: "Netlify", value: "netlify" }
       ]
     })
   ]
@@ -241,11 +242,15 @@ export const NextJsStarter = new Primitives.Plugin({
     icon: "https://miro.medium.com/max/500/1*cPh7ujRIfcHAy4kW2ADGOw.png", // TODO - get self-hosted icon here
     documentation: documentation
   },
+  version: "0.1.0",
+  techTags: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Storybook"],
+  typeTags: ["Web Application"],
   configurationGroups: [
     new Primitives.ConfigurationGroup({
       identifier: "configure",
       content: {
         label: "Configure",
+
         description: "Configure your boilerplate code"
       },
       properties: [

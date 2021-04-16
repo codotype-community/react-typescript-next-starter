@@ -1,22 +1,22 @@
 {
-    "name": "nextjs_starter_kit",
-    "version": "0.1.0",
-    "scripts": {
-        "build": "npm run clean && npm run copyTemplates && npm run compile",
-        "dev": "tsc -w -p tsconfig.json",
-        "clean": "rm -rf ./dist",
-        "compile": "tsc -p tsconfig.json",
-        "copyTemplates": "mkdir dist && cp -R ./src/* ./dist",
-        "prepublishOnly": "npm run build",
-        "test": "codotype plugin-test",
-        "serve": "codotype plugin-serve"
-    },
-    "license": "MIT",
-    "dependencies": {
-        "@codotype/core": "0.8.0-canary.12"
-    },
-    "devDependencies": {
-        "@codotype/cli": "0.8.0-canary.22",
-        "typescript": "^3.8.3"
-    }
+  "name": "nextjs_starter_kit",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "npm run clean && npm run copyTemplates && npm run compile",
+    "dev": "tsc -w -p tsconfig.json",
+    "clean": "rm -rf ./dist",
+    "compile": "tsc -p tsconfig.json",
+    "copyTemplates": "mkdir dist && cp -R ./src/* ./dist",
+    "prepublishOnly": "npm run build",
+    "test": "codotype plugin-test",
+    "serve": "codotype plugin-serve"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@codotype/core": "0.8.0-canary.14"
+  },
+  "devDependencies": {
+    "@codotype/cli": "0.8.0-canary.24",
+    "typescript": "^3.8.3"
+  }
 }
