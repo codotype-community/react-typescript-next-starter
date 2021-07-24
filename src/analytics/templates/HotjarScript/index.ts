@@ -1,0 +1,1 @@
+export { HotjarScript } from "./component";

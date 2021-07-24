@@ -1,0 +1,1 @@
+export { GoogleAnalyticsScript } from "./component";
