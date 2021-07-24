@@ -33,6 +33,4 @@ Open source under the [MIT License](https://github.com/codotype-community/react-
 
 Built with [Codotype.io](https://www.codotype.io/).
 
-[![Tweet](https://img.shields.io/twitter/url/https/github.com/codotype-community/react-typescript-next-starter.svg?style=social)](https://twitter.com/intent/tweet?text=https://github.com/codotype-community/react-typescript-next-starter)
-
 `;

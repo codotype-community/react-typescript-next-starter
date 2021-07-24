@@ -11,14 +11,14 @@ const PACKAGE_JSON_BASE = {
   scripts: {
     dev: "next dev",
     build: "next build",
-    start: "next start"
+    start: "next start",
   },
   dependencies: {
     next: "^10.0.7",
     "next-seo": "^4.19.0",
     react: "^17.0.1",
     "react-dom": "^17.0.1",
-    typescript: "^4.1.5"
+    typescript: "^4.1.5",
   },
   devDependencies: {
     "@babel/core": "^7.12.16",
@@ -28,8 +28,8 @@ const PACKAGE_JSON_BASE = {
     autoprefixer: "9",
     "babel-loader": "^8.2.2",
     postcss: "7",
-    tailwindcss: "npm:@tailwindcss/postcss7-compat"
-  }
+    tailwindcss: "npm:@tailwindcss/postcss7-compat",
+  },
 };
 
 const Generator: GeneratorProps = {
@@ -37,7 +37,7 @@ const Generator: GeneratorProps = {
   async write({ runtime, project }) {
     // Defines base package.json
     const packageJson = {
-      ...PACKAGE_JSON_BASE
+      ...PACKAGE_JSON_BASE,
     };
 
     // Gets consolidated configuration data
@@ -82,17 +82,29 @@ const Generator: GeneratorProps = {
       packageJson.devDependencies["@storybook/react"] = "^6.1.18";
     }
 
+    // Handle config.includeFontAwesome
+    if (config.includeFontAwesome) {
+      packageJson.dependencies["@fortawesome/fontawesome-svg-core"] = "^1.2.35";
+      packageJson.dependencies["@fortawesome/free-solid-svg-icons"] = "^5.15.3";
+      packageJson.dependencies["@fortawesome/react-fontawesome"] = "^0.1.14";
+    }
+
+    // Handle config.includeHeroicons
+    if (config.includeHeroicons) {
+      packageJson.dependencies["@heroicons/react"] = "^1.0.1";
+    }
+
     // Writes package.json
     await runtime.writeFile(
       "package.json",
       JSON.stringify(packageJson, null, 4),
       {
         prettify: {
-          parser: PrettifyParsers.json
-        }
+          parser: PrettifyParsers.json,
+        },
       }
     );
-  }
+  },
 };
 
 export = Generator;

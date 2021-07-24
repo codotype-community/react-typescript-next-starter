@@ -9,7 +9,9 @@ const generator: GeneratorProps = {
     await this.composeWith("./tooling");
     await this.composeWith("./hosting");
     await this.composeWith("./react-components");
-  }
+    await this.composeWith("./env");
+    // await this.composeWith("./analytics");
+  },
 };
 
 // exports generator constructor options
