@@ -14,21 +14,26 @@ const PACKAGE_JSON_BASE = {
     start: "next start",
   },
   dependencies: {
-    next: "^10.0.7",
+    next: "^12.0.0",
     "next-seo": "^4.19.0",
     react: "^17.0.1",
     "react-dom": "^17.0.1",
-    typescript: "^4.1.5",
   },
   devDependencies: {
-    "@babel/core": "^7.12.16",
+    "@babel/core": "^7.16.16",
     "@tailwindcss/postcss7-compat": "^2.0.3",
     "@types/node": "^14.14.28",
     "@types/react": "^17.0.2",
-    autoprefixer: "9",
-    "babel-loader": "^8.2.2",
-    postcss: "7",
-    tailwindcss: "npm:@tailwindcss/postcss7-compat",
+    "@types/react-dom": "^17.0.2",
+    autoprefixer: "^10.4.1",
+    "babel-loader": "^8.2.3",
+    postcss: "^8.4.5",
+    "postcss-loader": "^6.2.1",
+    tailwindcss: "3.0.0",
+    typescript: "^4.3.5",
+  },
+  resolutions: {
+    webpack: "^5",
   },
 };
 
@@ -76,10 +81,13 @@ const Generator: GeneratorProps = {
     if (config.includeStorybook) {
       packageJson.scripts["storybook"] = "start-storybook -p 6006";
       packageJson.scripts["build-storybook"] = "build-storybook";
-      packageJson.devDependencies["@storybook/addon-actions"] = "^6.1.18";
-      packageJson.devDependencies["@storybook/addon-essentials"] = "^6.1.18";
-      packageJson.devDependencies["@storybook/addon-links"] = "^6.1.18";
-      packageJson.devDependencies["@storybook/react"] = "^6.1.18";
+      packageJson.devDependencies["@storybook/addon-actions"] = "^6.4.14";
+      packageJson.devDependencies["@storybook/addon-essentials"] = "^6.4.14";
+      packageJson.devDependencies["@storybook/addon-links"] = "^6.4.14";
+      packageJson.devDependencies["@storybook/addon-postcss"] = "^2.0.0";
+      packageJson.devDependencies["@storybook/builder-webpack5"] = "^6.4.14";
+      packageJson.devDependencies["@storybook/manager-webpack5"] = "^6.4.14";
+      packageJson.devDependencies["@storybook/react"] = "^6.4.14";
     }
 
     // Handle config.includeFontAwesome
