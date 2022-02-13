@@ -14,7 +14,7 @@ This is a Codotype Plugin for generating React.js + Next.js + TypeScript applica
 
 3. Run `yarn serve` to serve the plugin locally using [@codotype/cli](https://www.npmjs.com/package/@codotype/cli)
 
-4. Use the web app (should be served at `localhost:3000`) to change default parameters and generate your code.
+4. Use the web app (should be served at `localhost:3030`) to change default parameters and generate your code.
 
 5. Your generated code should be in the `.codotype-out` directory.
 

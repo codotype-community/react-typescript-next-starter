@@ -29,16 +29,28 @@
 
 <hr/>
 
+## Development
+
+1. Run `yarn install` to install dependencies
+
+2. Run `yarn build` to build your Next.js app
+
+3. Run `yarn dev` to run the Next.js development server at [localhost:3000](http://localhost:3000)
+
+4. Run `yarn storybook` to run the Storybook.js server [localhost:6006](http://localhost:6006)
+
+5. Run `yarn start` to run the Next.js app without development server at [localhost:3000](http://localhost:3000)
+
 ## Built with
 
--   [React](https://reactjs.org)
--   [TypeScript](https://www.typescriptlang.org/)
--   [Storybook](https://storybook.js.org/)
--   [Jest](https://jestjs.io)
--   [Eslint](https://eslint.org/)
--   [Prettier](https://prettier.io/)
--   [Tailwind CSS](https://tailwindcss.com)
--   [next-seo](https://github.com/garmeeh/next-seo)
+- [React](https://reactjs.org)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Storybook](https://storybook.js.org/)
+- [Jest](https://jestjs.io)
+- [Eslint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [Tailwind CSS](https://tailwindcss.com)
+- [next-seo](https://github.com/garmeeh/next-seo)
 
 ### License
 
