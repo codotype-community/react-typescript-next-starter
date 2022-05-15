@@ -1,0 +1,11 @@
+# Doc: https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "daily"
+    allow:
+      # Allow updates for @codotype/ui && @codotype/cli packages
+      - dependency-name: "@codotype/ui"
+      - dependency-name: "@codotype/cli"
