@@ -1,6 +1,6 @@
 {
   "name": "nextjs_starter_kit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "build": "npm run clean && npm run copyTemplates && npm run compile",
     "dev": "tsc -w -p tsconfig.json",
@@ -16,7 +16,7 @@
     "@codotype/core": "0.8.0-canary.17"
   },
   "devDependencies": {
-    "@codotype/cli": "0.8.0-canary.25",
+    "@codotype/cli": "0.8.0-canary.27",
     "typescript": "^3.8.3"
   }
 }
