@@ -1,6 +1,6 @@
 # Nextjs Starter Kit Codotype Plugin
 
-A starter Codotype Plugin.
+Website starter kit built with Next.js + React.js + TypeScript + TailwindCSS.
 
 ## Getting Started
 
