@@ -22,15 +22,15 @@ const Generator: GeneratorProps = {
     if (hostingPlatform === "docker") {
       await runtime.renderTemplate({
         src: "Dockerfile",
-        dest: "Dockerfile"
+        dest: "Dockerfile",
       });
       await runtime.renderTemplate({
         src: ".dockerignore",
-        dest: ".dockerignore"
+        dest: ".dockerignore",
       });
       await runtime.renderTemplate({
         src: "docker-compose.yml",
-        dest: "docker-compose.yml"
+        dest: "docker-compose.yml",
       });
     }
 
@@ -38,12 +38,10 @@ const Generator: GeneratorProps = {
     if (hostingPlatform === "netlify") {
       await runtime.renderTemplate({
         src: "netlify.toml",
-        dest: "netlify.toml"
+        dest: "netlify.toml",
       });
     }
-
-    // TODO - handle vercel?
-  }
+  },
 };
 
 export = Generator;

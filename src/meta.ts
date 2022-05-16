@@ -110,11 +110,26 @@ export const analyticsProperty = new Primitives.ConfigurationProperty({
     // new Primitives.ConfigurationProperty({
     //   identifier: "hotjar",
     //   content: {
-    //     label: "Hotjar Analytics",
+    //     label: "Hotjar",
     //     description:
     //       "Include Hotjar heatmaps & behavior analytics tools in your website",
     //     icon: "https://cdn2.hubspot.net/hubfs/2069462/Hotjar_Flame-1-1.png",
     //     documentation: "",
+    //   },
+    //   defaultValue: true,
+    //   type: PropertyTypes.BOOLEAN,
+    //   layoutVariant: PropertyLayoutVariants.CARD_COL_6,
+    // }),
+    // new Primitives.ConfigurationProperty({
+    //   identifier: "datadog",
+    //   content: {
+    //     label: "Datadog",
+    //     description:
+    //       "Include Datadog Real User Monitoring (RUM) and performance monitoring.",
+    //     icon:
+    //       "https://www.drupal.org/files/styles/grid-4-2x/public/datadog-logo-purple.png?itok=1gen8ZoL",
+    //     documentation:
+    //       "https://www.google.com/aclk?sa=l&ai=DChcSEwjBpNKTi9H3AhVCjlsKHfOHAPkYABABGgJ5bQ&ae=2&sig=AOD64_2svRJt4YxI5v5_4EBDSkSmxfhJtg&q&adurl&ved=2ahUKEwiK6sqTi9H3AhWxhIkEHZkgD9gQ0Qx6BAgDEAE",
     //   },
     //   defaultValue: true,
     //   type: PropertyTypes.BOOLEAN,
@@ -212,19 +227,44 @@ export const hostingProperty = new Primitives.ConfigurationProperty({
     new Primitives.ConfigurationProperty({
       identifier: "platform",
       content: {
-        label: "Platform",
-        description: "How would you like to host your website?",
-        icon:
-          // "https://cdn1.iconfinder.com/data/icons/hawcons/32/699966-icon-1-cloud-512.png",
-          "https://cdn4.iconfinder.com/data/icons/colicon/24/cloud-512.png",
-        documentation: "",
+        label: "Hosting Platform",
+        description: "Where would you like to host your website?",
+        // icon:
+        //   // "https://cdn1.iconfinder.com/data/icons/hawcons/32/699966-icon-1-cloud-512.png",
+        //   "https://cdn4.iconfinder.com/data/icons/colicon/24/cloud-512.png",
+        // documentation: "",
       },
-      type: PropertyTypes.DROPDOWN,
-      defaultValue: "docker",
+      type: PropertyTypes.RADIO_GROUP,
+      defaultValue: "vercel",
       selectOptions: [
-        { label: "None", value: "none" },
-        { label: "Docker", value: "docker" },
-        { label: "Netlify", value: "netlify" },
+        {
+          label: "Vercel",
+          value: "vercel",
+          description: "Deploy the Next.js app to Vercel.",
+          icon: "https://assets.pipedream.net/s.v0/app_1xohRm/logo/orig",
+        },
+        {
+          label: "Docker",
+          value: "docker",
+          description: "Deploy the Next.js app in a Docker container.",
+          icon:
+            "https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png",
+        },
+        {
+          label: "Netlify",
+          value: "netlify",
+          description:
+            "Deploy the Next.js app to Netlify - only compatible with `next export` command.",
+          icon: "https://www.netlify.com/v3/img/components/logomark.png",
+        },
+        // {
+        //   label: "GitHub Pages",
+        //   value: "github_pages",
+        //   description: "This is the github_pages description",
+        //   documentation: "",
+        //   icon:
+        //     "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+        // },
       ],
     }),
   ],
@@ -280,6 +320,7 @@ export const iconsProperty = new Primitives.ConfigurationProperty({
 
 // Other properties:
 // - Marketing - Mailchip
+// - Analytics - Datadog
 // - Customer Engagement - Intercom
 // - Customer Engagement - FOSS Intercom alternative?
 // - Customer Engagement - Segment (Customer Data Platform)

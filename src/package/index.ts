@@ -87,6 +87,7 @@ const Generator: GeneratorProps = {
       packageJson.devDependencies["@storybook/addon-postcss"] = "^2.0.0";
       packageJson.devDependencies["@storybook/builder-webpack5"] = "^6.4.9";
       packageJson.devDependencies["@storybook/manager-webpack5"] = "^6.4.9";
+      packageJson.devDependencies["@storybook/testing-library"] = "^0.0.9"; // TODO - test this...
       packageJson.devDependencies["@storybook/react"] = "^6.4.9";
     }
 
@@ -102,10 +103,21 @@ const Generator: GeneratorProps = {
       packageJson.dependencies["@heroicons/react"] = "^1.0.1";
     }
 
+    // TODO - implement this feature
+    // TODO - update Storybook stories to all be in CSF
+    // TODO - update Navbar component
+    // TODO - update basic page layout
+    // TODO - Include basic TailwindCSS theme
+    // DOC: https://rafaassad.medium.com/integrate-datadog-with-nextjs-591fe126e339
+    // Handle config.includeDatadog
+    // if (config.includeDatadog) {
+    //   packageJson.dependencies["@datadog/browser-rum"] = "^4.8.1";
+    // }
+
     // Writes package.json
     await runtime.writeFile(
       "package.json",
-      JSON.stringify(packageJson, null, 4),
+      JSON.stringify(packageJson, null, 4), // TODO - sort dependencies, devDependencies
       {
         prettify: {
           parser: PrettifyParsers.json,
