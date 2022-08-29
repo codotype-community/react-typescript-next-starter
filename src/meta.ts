@@ -139,6 +139,82 @@ export const analyticsProperty = new Primitives.ConfigurationProperty({
 });
 
 // // // //
+// Editor
+export const textEditorProperty = new Primitives.ConfigurationProperty({
+  identifier: "editor",
+  content: {
+    label: "Editor",
+    description: "Which SEO features would you like?",
+    icon: "",
+    documentation: "",
+  },
+  type: PropertyTypes.INSTANCE,
+  layoutVariant: PropertyLayoutVariants.COL_12,
+  defaultValue: {},
+  selectOptions: [],
+  properties: [
+    new Primitives.ConfigurationProperty({
+      identifier: "vscode",
+      content: {
+        label: "VSCode Directory",
+        description:
+          "Include .vscode directory in your codebase - includes workspace settings and recommended extensions",
+        icon: "https://cdn.svgporn.com/logos/visual-studio-code.svg",
+        documentation: "",
+      },
+      defaultValue: true,
+      type: PropertyTypes.BOOLEAN,
+      layoutVariant: PropertyLayoutVariants.CARD_COL_6,
+    }),
+  ],
+});
+
+// // // //
+// GitHub
+export const githubProperty = new Primitives.ConfigurationProperty({
+  identifier: "github",
+  content: {
+    label: "GitHub",
+    description:
+      "Which GitHub features would you like included in your codebase?",
+    icon: "",
+    documentation: "",
+  },
+  type: PropertyTypes.INSTANCE,
+  layoutVariant: PropertyLayoutVariants.COL_12,
+  defaultValue: {},
+  selectOptions: [],
+  properties: [
+    new Primitives.ConfigurationProperty({
+      identifier: "dependabot",
+      content: {
+        label: "Dependabot",
+        description: "Include .github/dependabot.yml file in your codebase",
+        icon:
+          "https://imgs.search.brave.com/xs3w9aSXEMKbuWLujuthHPK9_0OEm7oNdHF2AyQMkvg/rs:fit:200:200:1/g:ce/aHR0cHM6Ly9hdmF0/YXJzMy5naXRodWJ1/c2VyY29udGVudC5j/b20vdS8yNzM0NzQ3/Nj9zPTIwMCZ2PTQ",
+        documentation: "",
+      },
+      defaultValue: true,
+      type: PropertyTypes.BOOLEAN,
+      layoutVariant: PropertyLayoutVariants.CARD_COL_6,
+    }),
+    new Primitives.ConfigurationProperty({
+      identifier: "pullRequestTemplate",
+      content: {
+        label: "Pull Request Template",
+        description:
+          "Include .github/pull_request_template.md file in your codebase",
+        icon: "https://cdn.svgporn.com/logos/markdown.svg",
+        documentation: "",
+      },
+      defaultValue: true,
+      type: PropertyTypes.BOOLEAN,
+      layoutVariant: PropertyLayoutVariants.CARD_COL_6,
+    }),
+  ],
+});
+
+// // // //
 // SEO
 export const seoProperty = new Primitives.ConfigurationProperty({
   identifier: "seo",
@@ -351,6 +427,8 @@ export const NextJsStarter = new Primitives.Plugin({
         // seoProperty,
         iconsProperty,
         analyticsProperty,
+        textEditorProperty,
+        githubProperty,
         hostingProperty,
       ],
     }),
