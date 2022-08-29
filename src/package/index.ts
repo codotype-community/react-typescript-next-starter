@@ -14,22 +14,22 @@ const PACKAGE_JSON_BASE = {
     start: "next start",
   },
   dependencies: {
-    next: "^12.0.0",
+    next: "^12.2.5",
     "next-seo": "^4.19.0",
-    react: "^17.0.1",
-    "react-dom": "^17.0.1",
+    react: "^18.0.0",
+    "react-dom": "^18.0.0",
   },
   devDependencies: {
-    "@babel/core": "^7.16.16",
-    "@types/node": "^14.14.28",
-    "@types/react": "^17.0.2",
-    "@types/react-dom": "^17.0.2",
+    "@babel/core": "^7.16.16", // QUESTION - is this only needed for Jest?
+    "@types/node": "^18.7.13",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
     autoprefixer: "^10.4.1",
-    "babel-loader": "^8.2.3",
+    "babel-loader": "^8.2.3", // QUESTION - is this only needed for Jest?
     postcss: "^8.4.5",
-    "postcss-loader": "^6.2.1",
-    tailwindcss: "^3.0.22",
-    typescript: "^4.3.5",
+    "postcss-loader": "^7.0.1",
+    tailwindcss: "^3.1.8",
+    typescript: "^4.8.2",
   },
   resolutions: {
     webpack: "^5",
@@ -42,6 +42,8 @@ const Generator: GeneratorProps = {
     // Defines base package.json
     const packageJson = {
       ...PACKAGE_JSON_BASE,
+      // Set "name" property in package.json
+      name: project.identifiers.kebab,
     };
 
     // Gets consolidated configuration data
@@ -104,10 +106,10 @@ const Generator: GeneratorProps = {
     }
 
     // TODO - implement this feature
-    // TODO - update Storybook stories to all be in CSF
-    // TODO - update Navbar component
+    // TODO - update Navbar component + add stories
     // TODO - update basic page layout
-    // TODO - Include basic TailwindCSS theme
+    // TODO - Include basic TailwindCSS theme?
+    // TODO - Include custom Storybook theme?
     // DOC: https://rafaassad.medium.com/integrate-datadog-with-nextjs-591fe126e339
     // Handle config.includeDatadog
     // if (config.includeDatadog) {
