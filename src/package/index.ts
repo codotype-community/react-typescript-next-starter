@@ -67,8 +67,8 @@ const Generator: GeneratorProps = {
       packageJson.devDependencies["@types/jest"] = "^26.0.20";
       packageJson.devDependencies["jest"] = "^26.6.3";
       packageJson.devDependencies["ts-jest"] = "^26.5.1";
-      packageJson.devDependencies["react-test-renderer"] = "^17.0.1";
-      packageJson.devDependencies["@types/react-test-renderer"] = "^17.0.1";
+      packageJson.devDependencies["react-test-renderer"] = "^18.0.0";
+      packageJson.devDependencies["@types/react-test-renderer"] = "^18.0.0";
     }
 
     // Handle config.includePrettier
@@ -110,6 +110,7 @@ const Generator: GeneratorProps = {
     // TODO - update basic page layout
     // TODO - Include basic TailwindCSS theme?
     // TODO - Include custom Storybook theme?
+    // TODO - Include MockServiceWorker w/ Storybook setup + example?
     // DOC: https://rafaassad.medium.com/integrate-datadog-with-nextjs-591fe126e339
     // Handle config.includeDatadog
     // if (config.includeDatadog) {
