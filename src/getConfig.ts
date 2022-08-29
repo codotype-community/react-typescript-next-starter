@@ -5,6 +5,8 @@ import {
   iconsProperty,
   // seoProperty,
   hostingProperty,
+  githubProperty,
+  textEditorProperty,
 } from "./meta";
 
 export interface Config {
@@ -21,6 +23,9 @@ export interface Config {
   // seoSitemap: boolean;
   // seoJsonLD: boolean;
   hostingPlatform: string;
+  includeDependabot: boolean;
+  includeVsCodeDirectory: boolean;
+  includePullRequestTemplate: boolean;
 }
 
 export function getConfig(props: { project: Project }): Config {
@@ -31,6 +36,8 @@ export function getConfig(props: { project: Project }): Config {
   const icons = iconsProperty.identifier;
   // const seo = seoProperty.identifier;
   const hosting = hostingProperty.identifier;
+  const github = githubProperty.identifier;
+  const editor = textEditorProperty.identifier;
 
   // Pull tooling properties from project
   const includeJest: boolean = config[tooling]["jest"] || false;
@@ -56,6 +63,14 @@ export function getConfig(props: { project: Project }): Config {
   // Pull Hosting properties from project
   const hostingPlatform: string = config[hosting]["platform"];
 
+  // Pull GitHub properties from project
+  const includeDependabot: boolean = config[github]["dependabot"] || false;
+  const includePullRequestTemplate: boolean =
+    config[github]["pullRequestTemplate"] || false;
+
+  // Pull TextEditor properties from project
+  const includeVsCodeDirectory = config[editor]["vscode"] || false;
+
   return {
     includeJest,
     includePrettier,
@@ -70,5 +85,8 @@ export function getConfig(props: { project: Project }): Config {
     // seoSitemap,
     // seoJsonLD,
     hostingPlatform,
+    includeDependabot,
+    includeVsCodeDirectory,
+    includePullRequestTemplate,
   };
 }
