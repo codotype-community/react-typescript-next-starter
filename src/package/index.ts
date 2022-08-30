@@ -97,7 +97,7 @@ const Generator: GeneratorProps = {
     if (config.includeFontAwesome) {
       packageJson.dependencies["@fortawesome/fontawesome-svg-core"] = "^1.2.35";
       packageJson.dependencies["@fortawesome/free-solid-svg-icons"] = "^5.15.3";
-      packageJson.dependencies["@fortawesome/react-fontawesome"] = "^0.1.14";
+      packageJson.dependencies["@fortawesome/react-fontawesome"] = "^0.2.0";
     }
 
     // Handle config.includeHeroicons
