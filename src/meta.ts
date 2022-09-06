@@ -2,7 +2,6 @@ import {
   PropertyTypes,
   Primitives,
   PropertyLayoutVariants,
-  ExperienceRecommendations,
 } from "@codotype/core";
 import { documentation } from "./documentation";
 
@@ -170,7 +169,14 @@ export const textEditorProperty = new Primitives.ConfigurationProperty({
 });
 
 // // // //
+
 // GitHub
+// ENHANCEMENT - Add "Funding - Include funding.yml example file in .github directory (optional)
+// ENHANCEMENT - CONTRIBUTING.md file (optional)
+// ENHANCEMENT - CODE_OF_CONDUCT.md file (optional)
+// ENHANCEMENT - Issue templates (optional)
+// ENHANCEMENT - GitHub actions for ensuring that lint + prettify have run before merge?
+
 export const githubProperty = new Primitives.ConfigurationProperty({
   identifier: "github",
   content: {
