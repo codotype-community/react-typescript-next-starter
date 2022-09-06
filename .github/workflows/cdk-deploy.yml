@@ -39,8 +39,8 @@ jobs:
     environment: production
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - name: Checkout plugin repo (this repository)
+        uses: actions/checkout@v3
 
       - name: Install aws-cdk CLI
         run: npm install -g aws-cdk@latest
@@ -51,9 +51,26 @@ jobs:
       - name: Build plugin /dist directory
         run: "yarn build"
 
-      # - name: "Clone codotype-api repository"
-      # - name: Install dependencies
-      #   run: "yarn --cwd ./src/heartbeat install && yarn --cwd ./src/vault-data install"
+      - name: Checkout codotype-api repo (encapsulates CDK stack)
+        uses: actions/checkout@v3
+        with:
+          repository: "codotype/codotype-api"
+          path: "codotype-api"
+
+      - name: Install codotype-api CDK stack dependencies
+        run: "yarn --cwd ./codotype-api install"
+
+      - name: "Install generate-endpoint AWS Lambda dependencies"
+        run: "yarn --cwd ./codotype-api/src/generate-endpoint install"
+
+      - name: "Install plugins-endpoint AWS Lambda dependencies"
+        run: "yarn --cwd ./codotype-api/src/plugins-endpoint install"
+
+      - name: "Install preview-endpoint AWS Lambda dependencies"
+        run: "yarn --cwd ./codotype-api/src/preview-endpoint install"
+
+      - name: "Build CDK Stack"
+        run: "yarn --cwd ./codotype-api build"
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@13d241b293754004c80624b5567555c4a39ffbe3
@@ -62,5 +79,5 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
-      # - name: Deploy CDK stack
-      #   run: cdk deploy --require-approval never
+      - name: Deploy CDK stack
+        run: cd ./codotype-api && cdk deploy --require-approval never
