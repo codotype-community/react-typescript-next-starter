@@ -61,13 +61,13 @@ jobs:
         run: "yarn --cwd ./codotype-api install"
 
       - name: "Install generate-endpoint AWS Lambda dependencies"
-        run: "yarn --cwd ./codotype-api/src/generate-endpoint install"
+        run: "yarn --cwd ./codotype-api/src/generate-endpoint install && cp -R ./dist ./codotype-api/src/generate-endpoint/plugin"
 
       - name: "Install plugins-endpoint AWS Lambda dependencies"
-        run: "yarn --cwd ./codotype-api/src/plugins-endpoint install"
+        run: "yarn --cwd ./codotype-api/src/plugins-endpoint install && cp -R ./dist ./codotype-api/src/plugins-endpoint/plugin"
 
       - name: "Install preview-endpoint AWS Lambda dependencies"
-        run: "yarn --cwd ./codotype-api/src/preview-endpoint install"
+        run: "yarn --cwd ./codotype-api/src/preview-endpoint install && cp -R ./dist ./codotype-api/src/preview-endpoint/plugin"
 
       - name: "Build CDK Stack"
         run: "yarn --cwd ./codotype-api build"
