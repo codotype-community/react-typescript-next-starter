@@ -105,6 +105,13 @@ const Generator: GeneratorProps = {
       packageJson.dependencies["@heroicons/react"] = "^1.0.1";
     }
 
+    // TODO - upgrade FontAwesome version:
+    //  - "@fortawesome/fontawesome-free": "^6.1.2",
+    //  - "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    //  - "@fortawesome/free-brands-svg-icons": "^6.1.1",
+    //  - "@fortawesome/free-regular-svg-icons": "^6.1.1",
+    //  - "@fortawesome/free-solid-svg-icons": "^6.1.1",
+
     // TODO - implement this feature
     // TODO - update Navbar component + add stories
     // TODO - update basic page layout

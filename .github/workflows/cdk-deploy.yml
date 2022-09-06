@@ -1,0 +1,66 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+# # # # # #
+# # # # # #
+
+# Workflow Notes
+
+# - On dev/main merge -> pull down `codotype-api` repository and redeploy CDK stack
+
+#   - Build `dist` folder for plugin
+#   - Clone `codotype-api`
+#   - Copy `plugin/dist` into each lambda (we'll figure out how to handle node modules later)
+#   - Build + Deploy CDK stack -> Output API gateway URL.
+#   - LAST STEP -> Manually update API Gateway URL in Vercel deployment.
+#     - NOTE - vercel apps will re-deploy when we merge changes to `codotype-web`
+
+# # # # # #
+# # # # # #
+
+name: Deploy Plugin CDK Stack
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+
+env:
+  AWS_REGION: us-east-1
+  PLUGIN_ID: react-next-starter
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install aws-cdk CLI
+        run: npm install -g aws-cdk@latest
+
+      - name: Install project dependencies
+        run: "yarn install"
+      
+      - name: Build plugin /dist directory
+        run: "yarn build"
+
+      # - name: "Clone codotype-api repository"
+      # - name: Install dependencies
+      #   run: "yarn --cwd ./src/heartbeat install && yarn --cwd ./src/vault-data install"
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@13d241b293754004c80624b5567555c4a39ffbe3
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      # - name: Deploy CDK stack
+      #   run: cdk deploy --require-approval never
