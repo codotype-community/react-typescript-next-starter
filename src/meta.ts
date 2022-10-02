@@ -157,7 +157,7 @@ export const textEditorProperty = new Primitives.ConfigurationProperty({
       content: {
         label: "VSCode Directory",
         description:
-          "Include .vscode directory in your codebase - includes workspace settings and recommended extensions",
+          "Include `.vscode` directory in your codebase - includes workspace settings and recommended extensions",
         icon: "https://cdn.svgporn.com/logos/visual-studio-code.svg",
         documentation: "",
       },
@@ -195,7 +195,7 @@ export const githubProperty = new Primitives.ConfigurationProperty({
       identifier: "dependabot",
       content: {
         label: "Dependabot",
-        description: "Include .github/dependabot.yml file in your codebase",
+        description: "Include `.github/dependabot.yml` file in your codebase",
         icon:
           "https://imgs.search.brave.com/xs3w9aSXEMKbuWLujuthHPK9_0OEm7oNdHF2AyQMkvg/rs:fit:200:200:1/g:ce/aHR0cHM6Ly9hdmF0/YXJzMy5naXRodWJ1/c2VyY29udGVudC5j/b20vdS8yNzM0NzQ3/Nj9zPTIwMCZ2PTQ",
         documentation: "",
@@ -209,7 +209,7 @@ export const githubProperty = new Primitives.ConfigurationProperty({
       content: {
         label: "Pull Request Template",
         description:
-          "Include .github/pull_request_template.md file in your codebase",
+          "Include `.github/pull_request_template.md` file in your codebase",
         icon: "https://cdn.svgporn.com/logos/markdown.svg",
         documentation: "",
       },

@@ -55,13 +55,13 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
-"@codotype/cli@0.8.0-canary.28":
-  version "0.8.0-canary.28"
-  resolved "https://registry.yarnpkg.com/@codotype/cli/-/cli-0.8.0-canary.28.tgz#a8cf9d7991a97dd28eeb34163046e0fd2e423261"
-  integrity sha512-AnKdpcI1tbuY8flgnlfp7PX0CEy/TJLyjxt4HKwgbJPRnGs6KOm67H8/8Vl2RwSg2lYeSW+sOSTj2hHxJhhJ9g==
+"@codotype/cli@0.8.0-canary.31":
+  version "0.8.0-canary.31"
+  resolved "https://registry.yarnpkg.com/@codotype/cli/-/cli-0.8.0-canary.31.tgz#2ef73ba9efd4063ca9263dba594b6739c08d71e7"
+  integrity sha512-4hIjq1F4AIFE9L2jIsuakFqVRLorkcYRsN1XMutE/tNnvZk14pUKeBsetHosXzh8GbiCUmON1ptqXmBZsPD53w==
   dependencies:
-    "@codotype/core" "0.8.0-canary.18"
-    "@codotype/runtime" "^0.8.0-canary.12"
+    "@codotype/core" "0.8.0-canary.19"
+    "@codotype/runtime" "^0.8.0-canary.13"
     body-parser "^1.19.0"
     chalk "^2.4.1"
     commander "^2.19.0"
@@ -70,15 +70,16 @@
     inquirer "^6.2.0"
     minimist "^1.2.0"
     next "^11.1.0"
+    node-watch "^0.7.3"
     open "^7.0.4"
     react "^16.13.1"
     react-dom "^16.13.1"
     semver "^5.6.0"
 
-"@codotype/core@0.8.0-canary.18", "@codotype/core@^0.8.0-canary.18":
-  version "0.8.0-canary.18"
-  resolved "https://registry.yarnpkg.com/@codotype/core/-/core-0.8.0-canary.18.tgz#83389f9fa8b528f71c35e9048dcdf35fda2a94a7"
-  integrity sha512-ymDhDJqgpoqNkqy73BuYFbSKR0j9uJ8bMXtRcX4K+6uSqMSVHjRgRgPFGpKolNWshPX86C0Rqup+uguZehXBkg==
+"@codotype/core@0.8.0-canary.19", "@codotype/core@^0.8.0-canary.19":
+  version "0.8.0-canary.19"
+  resolved "https://registry.yarnpkg.com/@codotype/core/-/core-0.8.0-canary.19.tgz#8650a1a802a97e993a7a382bfce59a4aac43c972"
+  integrity sha512-7k02IJFhZVjrWALG1jUzMDlv1mi0QdyjJCgUqpoMw1lV561WZWI77Aoa6obBAcxgP1pxILKSoZsQi3dD162ueA==
   dependencies:
     "@types/lodash" "^4.14.149"
     "@types/pluralize" "0.0.29"
@@ -89,12 +90,12 @@
     underscore.string "^3.3.4"
     uuid "^8.0.0"
 
-"@codotype/runtime@^0.8.0-canary.12":
-  version "0.8.0-canary.12"
-  resolved "https://registry.yarnpkg.com/@codotype/runtime/-/runtime-0.8.0-canary.12.tgz#425ab75daba0077dc28269f4f4df086131314c5c"
-  integrity sha512-VssoIO5/gY6lW4eKXIeabIvQ05t6cu6ijDMtKgKDC3hWtRdad/VB8KWqYUUkpIZTe5J+8x9v7rTL8G6ebUie7w==
+"@codotype/runtime@^0.8.0-canary.13":
+  version "0.8.0-canary.13"
+  resolved "https://registry.yarnpkg.com/@codotype/runtime/-/runtime-0.8.0-canary.13.tgz#785ec911758927bb574edda75cf578decf85e0bc"
+  integrity sha512-RkMUHp3EpVNPyC4+F9dyXLk6+QoolVxUX0L1H6wmoJKvCYK/zbcLi7ZGVUP1bsQMvvSZOs0lO9l/H5v6OihY/A==
   dependencies:
-    "@codotype/core" "^0.8.0-canary.18"
+    "@codotype/core" "^0.8.0-canary.19"
     chalk "^2.4.1"
     ejs "^2.6.1"
     fs-extra "^7.0.1"
@@ -1748,6 +1749,11 @@ node-releases@^1.1.71:
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.71.tgz#cb1334b179896b1c89ecfdd4b725fb7bbdfc7dbb"
   integrity sha512-zR6HoT6LrLCRBwukmrVbHv0EpEQjksO6GmFcZQQuCAy139BEsoVKPYnf3jongYW83fAa1torLGYwxxky/p28sg==
 
+node-watch@^0.7.3:
+  version "0.7.3"
+  resolved "https://registry.yarnpkg.com/node-watch/-/node-watch-0.7.3.tgz#6d4db88e39c8d09d3ea61d6568d80e5975abc7ab"
+  integrity sha512-3l4E8uMPY1HdMMryPRUAl+oIHtXtyiTlIiESNSVSNxcPfzAFzeTbXFQkZfAwBbo0B1qMSG8nUABx+Gd+YrbKrQ==
+
 normalize-path@^3.0.0, normalize-path@~3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/normalize-path/-/normalize-path-3.0.0.tgz#0dcd69ff23a1c9b11fd0978316644a0388216a65"
@@ -2585,10 +2591,10 @@ type-is@~1.6.17, type-is@~1.6.18:
     media-typer "0.3.0"
     mime-types "~2.1.24"
 
-typescript@^4.8.2:
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.8.2.tgz#e3b33d5ccfb5914e4eeab6699cf208adee3fd790"
-  integrity sha512-C0I1UsrrDHo2fYI5oaCGbSejwX4ch+9Y5jTQELvovfmFkK3HHSZJB8MSJcWLmCUBzQBchCrZ9rMRV6GuNrvGtw==
+typescript@^3.8.3:
+  version "3.9.10"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.10.tgz#70f3910ac7a51ed6bef79da7800690b19bf778b8"
+  integrity sha512-w6fIxVE/H1PkLKcCPsFqKE7Kv7QUwhU8qQY2MueZXWx5cPZdwFupLgKK3vntcK98BtNHZtAF4LA/yl2a7k8R6Q==
 
 unbox-primitive@^1.0.2:
   version "1.0.2"

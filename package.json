@@ -13,10 +13,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@codotype/core": "0.8.0-canary.18"
+    "@codotype/core": "0.8.0-canary.19"
   },
   "devDependencies": {
-    "@codotype/cli": "0.8.0-canary.28",
+    "@codotype/cli": "0.8.0-canary.31",
     "typescript": "^3.8.3"
   }
 }
